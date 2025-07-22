@@ -1,0 +1,23 @@
+{
+  "name": "version",
+  "version": "1.0.0",
+  "description": "langing page",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivanonic/first_site_SASS_NPM.git"
+  },
+  "author": "Ivanonic Kr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivanonic/first_site_SASS_NPM/issues"
+  },
+  "homepage": "https://github.com/Ivanonic/first_site_SASS_NPM#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4",
+    "sass": "^1.89.2"
+  }
+}
