@@ -6,7 +6,7 @@
   "scripts": {
     "sass:watch": "sass --style=expanded --watch styles:dist",
     "parcel:watch": "parcel serve --dist-dir public",
-    "parcel:build": "parcel build --dist-dir build --public-url ./"
+    "parcel:build": "parcel build --dist-dir build --public-url https://github.com/Ivanonic/first_site_SASS_NPM.git"
   },
   "repository": {
     "type": "git",
