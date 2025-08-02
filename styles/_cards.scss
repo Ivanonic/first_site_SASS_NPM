@@ -1,0 +1,99 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'sass:color';
+
+.info-card {
+    width: 180px;
+    height: 205px;
+    padding: 20px 10px 0 10px;
+    border-radius: 20px;
+    background-color: color.adjust(v.$color_white, $alpha: -0.85);
+    @include m.d-flex(start, center, nowrap, column, 0, 10px);
+
+    .info-card_icon {
+        width: 25px;
+        height: 25px;
+        fill: v.$color_black;
+    }
+
+    &_title {
+        @include m.font(18px, 500, v.$color_black);
+    }   
+
+    &_description {
+        text-align: center;
+        @include m.font(16px, 300, v.$color_black);
+    }
+
+    .card-description4 {
+        letter-spacing: 2%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.adjust(v.$color_white, $alpha: -0.96);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .info-card_icon {
+            fill: v.$color_white;
+        }
+
+        .info-card_title, .info-card_description {
+            color: v.$color_white;
+        }
+    }
+
+    @media (max-width: v.$media_md) {  
+        .card-description1 {
+            line-height: 2;
+            letter-spacing: -2%;
+        }
+
+        .card-description2 {
+            line-height: 2;
+            letter-spacing: -5%;
+        }
+
+        .card-description3 {
+            line-height: 1.4;
+            letter-spacing: -4%;
+        }
+
+        .card-description {
+            line-height: 2;
+            letter-spacing: -4%;
+        }
+    }
+
+    @media (max-width: v.$media_xxxl) {
+        .card-description4_1 {
+            display: none;
+        }
+        
+    }
+
+    @media (max-width: v.$media_md) {
+        .card-description4 {
+            display: none;
+        }
+
+        .card-description4_1 {
+            display: block;
+        }
+        
+    }
+
+    @media (max-width: v.$media_min) {
+        width: 140px;
+        height: 170px;
+
+        .info-card_title {
+            @include m.font(14px, 400, v.$color_black);
+        }
+
+        .info-card_description {
+            @include m.font(11px, 300, v.$color_black);
+        }
+        
+    }
+}
